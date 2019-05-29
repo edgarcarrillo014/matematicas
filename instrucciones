@@ -1,0 +1,129 @@
+para poner un parrafo utilizar la etiqueta "p" 
+con la clase "parrafo" <p class="parrafo"></p>
+
+para titulos es el: h1
+para subtitulos es el: h6
+
+para poner una imagen con exto dentro:
+	1.-poner un "div" con la clase "espimg".
+	2.-dentro un "div" con la clase "targeta".
+	3.-despues un "div" con la clase "img".
+	4.-poner dentro la etiqueta img con la ruta de la imagen.
+	5.-fuera del "div" de la imagen.
+	Crear otro "div" con la clase "detalles" y dentro una etiqueta "p" sola
+
+----------Ejemplo--------------------------------------------------
+    <div class="espimg">
+------------------------------------------------------------------
+        <div class="tarjeta grande derecha">
+            <div class="img">
+                <img src="img/Factorizacion.jpg">
+            </div>
+            <div class="detalles">
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Totam provident at, quia, 
+                    delectus aliquid nisi possimus, quo dolor 
+                    itaque hic necessitatibus.</p>
+            </div>
+        </div>
+----------------------------------------------------------------     
+    </div>
+-------------------------------------------------------------------
+
+
+para poner una imagen sola:
+	1.-poner un "div" con la clase "imagen-n".
+	dentro de este div poner la etiqueta img con la ruta de la imagen
+
+-------Ejemplo--------------------------------------------
+    <div class="espimg">	
+----------------------------------------------------
+        <div class="imagen-n grande centrado">
+            <img src="img/algebra-s1.jpg">
+        </div>
+---------------------------------------------------
+	</div>
+---------------------------------------------------
+
+
+para poner un video:
+	1.-poner un "div" con la clase "boton"
+	2.-dentro del div poner un button con la
+	clase "btn modal-trigger" y un "data-target='video'"
+	este funcionara como id
+
+	3.-crear un "div" con un "id" y la clase "modal" en el "id" ira lo que
+	se escribio dentro del "data-target"
+
+	4.-crear un div con la clase "modal-content"
+	y dentro de este el video
+
+
+---------------Ejemplo---------------------------------------
+                <div class="boton">
+                    <button class="btn modal-trigger " data-target="ventana2">Ver video</button>
+                </div>
+                    
+
+                <div id="ventana2" class="modal">
+                        <div class="modal-content">
+                                <iframe width="100%" height="315" 
+                                src="https://www.youtube.com/embed/4bCKKe3mR08" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+-----------------------------------------------------------------------
+
+*estos se pondran aun lado de la clase padre.
+para posicionar todos los abjetos se deveran de usar las clases:
+	-derecha
+	-centrado
+	-izquierda
+
+para cambiar las imagenes de tamaño:
+	-grande
+	-mediana
+	-peque
+
+arriba y abajo:
+	-top-25
+	-top-50
+	-top-75
+	-top-100
+
+a los lados:
+	left-25
+	left-30
+	left-50
+	left-60
+	left-75
+	left-80
+	left-100
+
+
+
+para el exame:
+	titulos: h1
+	subtitulos: h6
+
+
+
+para poner un radio button:
+    <div class="radio">
+      <label>
+        <input class="with-gap" name="group2" type="radio"/>
+        <span>opcion1</span>
+      </label>
+    </div>
+dependiendo el numero de preguntas de devera de cambiar el "name"
+
+
+
+
+
+y para el boton de envio de respuestas:
+	<div class="boton">
+        <input type="submit" name="" value="Listo" class="btn">
+    </div>
+

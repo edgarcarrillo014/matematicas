@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loguin</title>
+    <link rel="stylesheet" href="css/loguin.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <body>
+
+    <div class="contenido">
+        <div class="header">
+            <div class="imagen">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="login-reg-panel">
+        <div class="login-info-box">
+            <h2>¿Ya tienes cuenta?</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <label id="label-register" for="log-reg-show">Iniciar seccion</label>
+            <input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+        </div>
+                            
+        <div class="register-info-box">
+            <h2>¿No tienes una cuenta?</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <label id="label-login" for="log-login-show">Reguistrarse</label>
+            <input type="radio" name="active-log-panel" id="log-login-show">
+        </div>
+                            
+        <div class="panel">
+            <div class="iniciar">
+                <h2>Iniciar seccion</h2>
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Contraseña">
+                <input type="button" value="Iniciar seccion">
+                <a href="">¿Se te olvidó tu contraseña?</a>
+            </div>
+            <div class="reguistrar">
+                <h2>Reguistrarse</h2>
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Contraseña">
+                <input type="password" placeholder="Confirmar Contraseña">
+                <input type="button" value="Reguistrarse">
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function(){
+    $('.login-info-box').fadeOut();
+    $('.iniciar').addClass('show-log-panel');
+});
+
+
+$('.login-reg-panel input[type="radio"]').on('change', function() {
+    if($('#log-login-show').is(':checked')) {
+        $('.register-info-box').fadeOut(); 
+        $('.login-info-box').fadeIn();
+        
+        $('.panel').addClass('right-log');
+        $('.reguistrar').addClass('show-log-panel');
+        $('.iniciar').removeClass('show-log-panel');
+        
+    }
+    else if($('#log-reg-show').is(':checked')) {
+        $('.register-info-box').fadeIn();
+        $('.login-info-box').fadeOut();
+        
+        $('.panel').removeClass('right-log');
+        
+        $('.iniciar').addClass('show-log-panel');
+        $('.reguistrar').removeClass('show-log-panel');
+    }
+});
+</script>
+</body>
+   
+</body>
+</html>

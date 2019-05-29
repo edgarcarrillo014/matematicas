@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>titulo de la paguina de explicacion</title>
+
+    <script type="javascript">
+    
+        var res=new Array;
+        var no=new Array;
+        var tures=new Array;
+        var explicares=new Array;
+        var calif=0;
+        
+        
+        res[1]="a";
+        res[2]="b";
+        res[3]="a";
+        res[4]="c";
+        res[5]="a";
+        res[6]="b";
+        res[7]="c";
+        res[8]="a";
+        
+        explicares[1]=" malo,la respuesta correcta es a";
+        explicares[2]=" malo,la respuesta correcta es b";
+        explicares[3]=" malo,la respuesta correcta es a";
+        explicares[4]=" malo,la respuesta correcta es c";
+        explicares[5]=" malo,la respuesta correcta es a";
+        explicares[6]=" malo,la respuesta correcta es b";
+        explicares[7]=" malo,la respuesta correcta es c";
+        explicares[8]=" malo,la respuesta correcta es a";
+        
+        function Engine(question, answer){
+            tures[question]=answer;
+        }
+        
+        function Score(){
+            var answertext="RESULTADOS\n";
+            calif=0;
+            for(i=1;i<=8;i++){
+                answertext=answertext+"\nPregunta"+i+":";
+                if(res[i]!=tures[i]){
+                    answertext=answertext+explicares[i]+"\n";
+                }
+                else{
+                    answertext=answertext+"bien\n";
+                    calif++; }}
+                answertext=answertext+"\nCalificacion:"+calif;
+            
+                answertext=answertext+"\nDianostico:";
+                if(calif>=0){
+                    answertext=answertext+"malo";
+                }
+                if(calif>=1 &&calif<=2){
+                    answertext=answertext+"regular";
+                }
+                if(calif>=3 &&calif<=4){
+                    answertext=answertext+"bueno";
+                }
+                if(calif>=5 &&calif<=6){
+                    answertext=answertext+"bueno";
+                }
+                if(calif>=7 &&calif<=8){
+                    answertext=answertext+"exelente";
+                }
+                
+                alert(answertext);
+            
+        }
+            
+        
+        
+        
+    </script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+    <script src="main.js" language="javascript" type="javascript"></script>
+    <link rel="stylesheet" href="materialize.css">
+    <link rel="stylesheet" href="stylesp.css">
+</head>
+<body>
+
+
+
+
+    <div class="contenido">
+        <div class="header">
+            <div class="imagen">
+                <img src=panda.jpg width="100%" height="100%">
+            </div>
+            <div class="texto">
+                <p>FOCUS ON</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="secciones">
+
+        <article id="tab1">
+            <section class="explicaciondt">
+                <h1>Examen parcial x</h1>
+                <h6>Propiedades De Los Triángulos Según Sus Lados Y Ángulos</h6>
+
+                <form action="#" method="POST">
+<!--------------------------------------------------------------------------------------------------------------------->
+
+                    <p class="pregunta">1.¿Que es una parabola?</p>
+                    <div class="radio">
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R1" value="a" onclick="Engine(1, this.value)" /><span>a) curva abierta formada por dos lineas o ramas simetricas respecto de un eje</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R1" value="b" onclick="Engine(1,this. value)" /><span>b) linea recta que se pronlonga indefinidamente</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap"  name="R1" value="c" onclick="Engine(1,this. value)" /><span>c) La suma de todos sus lados</span></p>
+                      </label>
+                    </div>
+<!--------------------------------------------------------------------------------------------------------------------->
+
+                    <p class="pregunta">2.¿Que es el movimiento rectilineo uniforme?</p>
+                    <div class="radio">
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R2" value="a" onclick="Engine(2,this. value)" /><span>a) En el que la aceleración que experimenta un cuerpo </span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R2" value="b" onclick="Engine(2,this. value)"/><span>b) Es aquel en el que la trayectoria es una línea recta y la velocidad es constante</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R2" value="c" onclick="Engine(2,this. value)" /><span>c) Es el radio de un circulo</span></p>
+                      </label>
+                    </div>
+<!--------------------------------------------------------------------------------------------------------------------->
+                    
+                    <p class="pregunta">3.¿Que es el movimiento uniformemente acelerado.?</p>
+                    <div class="radio">
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R3" value="a" onclick="Engine(3,this. value)" /><span>a) Es aquel en el que la trayectoria es una línea recta y la velocidad es constante</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R3" value="b" onclick="Engine(3,this. value)" /><span>b) Es cuando un objeto cae a una velocidad indefinida</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R3" value="c" onclick="Engine(3,this. value)" /><span>c) En el que la aceleración que experimenta un cuerpo</span></p>
+                      </label>
+                    </div>
+ <!--------------------------------------------------------------------------------------------------------------------->
+                
+                    
+                    <p class="pregunta">4.¿Que es el tiro parabolico?</p>
+                    <div class="radio">
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R4" value="a" onclick="Engine(4,this. value)" /><span>a) En el que la aceleración que experimenta un cuerpo</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R4" value="b" onclick="Engine(4,this. value)" /><span>b) Es aquel en el que la trayectoria es una línea recta y la velocidad es constante</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R4" value="c" onclick="Engine(4,this. value)" /><span> al movimiento realizado por cualquier objeto cuya trayectoria describe una parábola</span></p>
+                      </label>
+                    </div>
+                    
+ <!--------------------------------------------------------------------------------------------------------------------->             
+                    
+                    
+                    
+                
+                    
+           
+                </form>
+
+            </section>
+        </article>
+
+        <article id="tab2">
+            <section class="explicaciondt">
+                
+                    <div class="radio">
+                        <p class="pregunta">5.¿Que es la altura?</p>
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R5" value="a" onclick="Engine(5,this. value)" /><span>a) trayecto que puede recorrerse verticalmente entre un objeto o cuerpo y el suelo o cualquier otra superficie que tome como referente</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R5" value="b" onclick="Engine(5,this. value)" /><span>b) Es aquel en el que la trayectoria es una línea recta y la velocidad es constante</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R5" value="c" onclick="Engine(5,this. value)" /><span>c) Es cuando se deja caer un objeto a gran velocidad</span></p>
+                      </label>
+                    </div>
+                
+                
+                
+                <div class="radio">
+                        <p class="pregunta">6.¿Que es la caida libre?</p>
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R6" value="a" onclick="Engine(6,this. value)" /><span>a) Es aquel en el que la trayectoria es una línea recta y la velocidad es constante</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R6" value="b" onclick="Engine(6,this. value)" /><span>b) Es el movimiento que se debe únicamente a la influencia de la gravedad</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R6" value="c" onclick="Engine(6,this. value)" /><span>c) trayecto que puede recorrerse verticalmente entre un objeto o cuerpo y el suelo o cualquier otra superficie que tome como referente</span></p>
+                      </label>
+                    </div>
+                
+            
+                
+                
+                
+                <div class="radio">
+                        <p class="pregunta">7.¿Cuanto equivale la gravedad en fisica?</p>
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R7" value="a" onclick="Engine(7,this. value)" /><span>a) 8.56 m/s</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R7" value="b" onclick="Engine(7,this. value)" /><span>b) 11.23 m/s</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R7" value="c" onclick="Engine(7,this. value)" /><span>c) 9.81 m/s</span></p>
+                      </label>
+                    </div>
+                
+          
+                
+                
+                <div class="radio">
+                        <p class="pregunta">8.¿Que es la trayectoria?</p>
+                     <label>
+                        <p><input type="radio" class="with-gap" name="R8" value="a" onclick="Engine(8,this. value)" /><span>a) Línea descrita o recorrido que sigue alguien o algo al desplazarse de un punto a otro</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R8" value="b" onclick="Engine(8,this. value)" /><span>b) Línea cuyos puntos sucesivos cambian continuamente de dirección sin formar ángulo</span></p>
+                      </label>
+
+                      <label>
+                        <p><input type="radio" class="with-gap" name="R8" value="c" onclick="Engine(8,this. value)" /><span>c) Es la aceleracción de un cuerpo.</span></p>
+                      </label>
+                    </div>
+                 
+                <div class="boton left-75">
+                <input type="button" name="RESULTADOS" value="RESULTADOS" onclick="Score()"; />
+            </div>
+                
+                
+                    
+            </section>
+            </article>
+        
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="wrapp">
+            <ul class="tabss">
+                <li><a href="#tab1"><span class="tab-text"></span></a></li>
+                <li><a href="#tab2"><span class="tab-text"></span></a></li>
+                <!--<li><a href="#tab1"><span class="tab-text"></span></a></li>-->
+                <!--<li><a href="#tab2"><span class="tab-text"></span></a></li>-->
+            </ul>
+        </div>
+    
+
+    <script src="materialize.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.modal');
+          var instances = M.Modal.init(elems);
+        });
+    </script>
+</body>
+</html>
